@@ -16,7 +16,6 @@ public class Server extends EquationImpl{
             registry.bind("Equation", stub);
 
 
-
             System.err.println("Server ready");
         }catch (Exception e){
             System.err.println("Server exception: " + e.toString());
