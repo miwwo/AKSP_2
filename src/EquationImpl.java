@@ -2,7 +2,7 @@ import java.rmi.RemoteException;
 
 public class EquationImpl implements Equation{
     @Override
-    public void doEquation(int a, int b, int c) throws RemoteException {
+    public String doEquation(int a, int b, int c) throws RemoteException {
         System.out.println("Your equation is " + a + "x^2 + " + b + "x + " + c + " = 0");
         double x1 = 0, x2 = 0;
         if (b == 0 && c == 0){
@@ -35,6 +35,8 @@ public class EquationImpl implements Equation{
                 x2 = (-b +  Math.sqrt(D)) / (2 * a);
             }
         }
+        String resp = "x1: " + x1 + ", x2: " + x2 + "\n";
         System.out.println(x1 + "    " + x2);
+        return resp;
     }
 }

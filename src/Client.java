@@ -17,8 +17,10 @@ public class Client {
             int b = Integer.parseInt(args[1]);
             int c = Integer.parseInt(args[2]);
 
-            stub.doEquation(a, b, c);
-            System.err.println("Server ready");
+
+            System.out.println("Your equation is " + a + "x^2 + " + b + "x + " + c + " = 0");
+            String resp = stub.doEquation(a, b, c);
+            System.out.println(resp);
         } catch (Exception e){
             System.err.println("Server exception" + e.toString());
             e.printStackTrace();
